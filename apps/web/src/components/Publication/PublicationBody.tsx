@@ -3,12 +3,17 @@ import IFramely from '@components/Shared/IFramely';
 import Markup from '@components/Shared/Markup';
 import { EyeIcon } from '@heroicons/react/outline';
 import getURLs from '@lib/getURLs';
+import type { TranslationResult } from '@lib/translateText';
+import translateText from '@lib/translateText';
 import { Trans } from '@lingui/macro';
+import { useLingui } from '@lingui/react';
 import clsx from 'clsx';
 import type { Publication } from 'lens';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import type { FC } from 'react';
+import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 import DecryptedPublicationBody from './DecryptedPublicationBody';
 
@@ -19,10 +24,23 @@ interface Props {
 const PublicationBody: FC<Props> = ({ publication }) => {
   const { pathname } = useRouter();
   const showMore = publication?.metadata?.content?.length > 450 && pathname !== '/posts/[id]';
+  const [translatedText, setTranslatedText] = useState<TranslationResult | null>(null);
+  const { i18n } = useLingui();
 
   if (publication?.metadata?.encryptionParams) {
     return <DecryptedPublicationBody encryptedPublication={publication} />;
   }
+
+  const translateContent = async (sourceText: string) => {
+    try {
+      const translationResult = await translateText(sourceText, i18n.locale);
+      console.log('translationResult: ', translationResult);
+      setTranslatedText(translationResult);
+    } catch (error) {
+      console.error('ERROR', error);
+      toast.error('Translation failed');
+    }
+  };
 
   return (
     <div className="break-words">
@@ -37,6 +55,24 @@ const PublicationBody: FC<Props> = ({ publication }) => {
           </Link>
         </div>
       )}
+      {!translatedText ? (
+        <div className="mt-4 text-sm lt-text-gray-500 font-bold flex items-center space-x-1">
+          <button
+            type="button"
+            onClick={() => {
+              translateContent(publication?.metadata?.content);
+            }}
+          >
+            <Trans>🌐 Translate post</Trans>
+          </button>
+        </div>
+      ) : (
+        <div>
+          <div>Translated from: {translatedText.detectedSourceLanguage}</div>
+          <div>{translatedText.translatedText}</div>
+        </div>
+      )}
+
       {publication?.metadata?.media?.length > 0 ? (
         <Attachments attachments={publication?.metadata?.media} publication={publication} />
       ) : (
