@@ -4,7 +4,7 @@ import Markup from '@components/Shared/Markup';
 import { EyeIcon } from '@heroicons/react/outline';
 import getURLs from '@lib/getURLs';
 import type { TranslationResult } from '@lib/translateText';
-import translateText from '@lib/translateText';
+import translateText, { detectLanguage } from '@lib/translateText';
 import { Trans } from '@lingui/macro';
 import { useLingui } from '@lingui/react';
 import clsx from 'clsx';
@@ -12,7 +12,7 @@ import type { Publication } from 'lens';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import type { FC } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 
 import DecryptedPublicationBody from './DecryptedPublicationBody';
@@ -25,7 +25,17 @@ const PublicationBody: FC<Props> = ({ publication }) => {
   const { pathname } = useRouter();
   const showMore = publication?.metadata?.content?.length > 450 && pathname !== '/posts/[id]';
   const [translatedText, setTranslatedText] = useState<TranslationResult | null>(null);
+  const [canTranslate, setCanTranslate] = useState(false);
   const { i18n } = useLingui();
+
+  useEffect(() => {
+    (async () => {
+      const detectedLang = await detectLanguage(publication?.metadata?.content);
+      if (detectedLang != i18n.locale) {
+        setCanTranslate(true);
+      }
+    })();
+  }, [i18n.locale, publication?.metadata?.content]);
 
   if (publication?.metadata?.encryptionParams) {
     return <DecryptedPublicationBody encryptedPublication={publication} />;
@@ -34,10 +44,9 @@ const PublicationBody: FC<Props> = ({ publication }) => {
   const translateContent = async (sourceText: string) => {
     try {
       const translationResult = await translateText(sourceText, i18n.locale);
-      console.log('translationResult: ', translationResult);
       setTranslatedText(translationResult);
     } catch (error) {
-      console.error('PublicationBody ERROR', error);
+      console.error(error);
       toast.error('Translation failed');
     }
   };
@@ -56,17 +65,19 @@ const PublicationBody: FC<Props> = ({ publication }) => {
         </div>
       )}
       {!translatedText ? (
-        <div className="mt-4 text-sm lt-text-gray-500 font-bold flex items-center space-x-1">
-          <button
-            type="button"
-            onClick={(event) => {
-              translateContent(publication?.metadata?.content);
-              event.stopPropagation();
-            }}
-          >
-            <Trans>🌐 Translate post</Trans>
-          </button>
-        </div>
+        canTranslate && (
+          <div className="mt-4 text-sm lt-text-gray-500 font-bold flex items-center space-x-1">
+            <button
+              type="button"
+              onClick={(event) => {
+                translateContent(publication?.metadata?.content);
+                event.stopPropagation();
+              }}
+            >
+              <Trans>🌐 Translate post</Trans>
+            </button>
+          </div>
+        )
       ) : (
         <div>
           <div>Translated from: {translatedText.detectedSourceLanguage}</div>
