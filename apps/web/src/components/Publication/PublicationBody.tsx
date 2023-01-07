@@ -70,6 +70,14 @@ const PublicationBody: FC<Props> = ({ publication }) => {
         <div>
           <div>Translated from: {translatedText.detectedSourceLanguage}</div>
           <div>{translatedText.translatedText}</div>
+          <button
+            type="button"
+            onClick={() => {
+              setTranslatedText(null);
+            }}
+          >
+            Hide
+          </button>
         </div>
       )}
 
