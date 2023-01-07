@@ -8,31 +8,33 @@ export interface TranslationResult {
 
 const translateText = async (sourceText: string, targetLanguage: string): Promise<TranslationResult> => {
   const url = `https://translation.googleapis.com/language/translate/v2?key=${GOOGLE_API_KEY}`;
-  const request = {
-    q: [sourceText],
-    target: targetLanguage
-  };
-  return new Promise(function (resolve, reject) {
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', url, true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(JSON.stringify(request));
-    xhr.onload = function () {
-      if (this.status >= 200 && this.status < 300) {
-        const data = JSON.parse(this.responseText);
-        const translation = data.data.translations[0];
-        resolve({
-          detectedSourceLanguage: translation.detectedSourceLanguage,
-          translatedText: decode(translation.translatedText)
-        });
-      } else {
-        reject({
-          status: this.status,
-          statusText: xhr.statusText
-        });
+  return fetch(url, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      q: [sourceText],
+      target: targetLanguage
+    })
+  })
+    .then((res) => {
+      if (!res.ok) {
+        return Promise.reject(res);
       }
-    };
-  });
+      return res.json();
+    })
+    .then((data) => {
+      const translation = data.data.translations[0];
+      return Promise.resolve({
+        detectedSourceLanguage: translation.detectedSourceLanguage,
+        translatedText: decode(translation.translatedText)
+      });
+    })
+    .catch((error) => {
+      return Promise.reject(error);
+    });
 };
 
 export default translateText;

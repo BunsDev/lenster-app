@@ -37,7 +37,7 @@ const PublicationBody: FC<Props> = ({ publication }) => {
       console.log('translationResult: ', translationResult);
       setTranslatedText(translationResult);
     } catch (error) {
-      console.error('ERROR', error);
+      console.error('PublicationBody ERROR', error);
       toast.error('Translation failed');
     }
   };
