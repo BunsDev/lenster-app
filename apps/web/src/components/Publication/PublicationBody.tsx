@@ -59,8 +59,9 @@ const PublicationBody: FC<Props> = ({ publication }) => {
         <div className="mt-4 text-sm lt-text-gray-500 font-bold flex items-center space-x-1">
           <button
             type="button"
-            onClick={() => {
+            onClick={(event) => {
               translateContent(publication?.metadata?.content);
+              event.stopPropagation();
             }}
           >
             <Trans>🌐 Translate post</Trans>
@@ -72,8 +73,9 @@ const PublicationBody: FC<Props> = ({ publication }) => {
           <div>{translatedText.translatedText}</div>
           <button
             type="button"
-            onClick={() => {
+            onClick={(event) => {
               setTranslatedText(null);
+              event.stopPropagation();
             }}
           >
             Hide
