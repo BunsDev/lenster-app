@@ -3,8 +3,9 @@ import IFramely from '@components/Shared/IFramely';
 import Markup from '@components/Shared/Markup';
 import { EyeIcon } from '@heroicons/react/outline';
 import getURLs from '@lib/getURLs';
+import { getPrimaryLanguage } from '@lib/i18n';
 import type { TranslationResult } from '@lib/translateText';
-import translateText, { detectLanguage } from '@lib/translateText';
+import translateText from '@lib/translateText';
 import { Trans } from '@lingui/macro';
 import { useLingui } from '@lingui/react';
 import clsx from 'clsx';
@@ -12,7 +13,7 @@ import type { Publication } from 'lens';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import type { FC } from 'react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import toast from 'react-hot-toast';
 
 import DecryptedPublicationBody from './DecryptedPublicationBody';
@@ -25,17 +26,10 @@ const PublicationBody: FC<Props> = ({ publication }) => {
   const { pathname } = useRouter();
   const showMore = publication?.metadata?.content?.length > 450 && pathname !== '/posts/[id]';
   const [translatedText, setTranslatedText] = useState<TranslationResult | null>(null);
-  const [canTranslate, setCanTranslate] = useState(false);
   const { i18n } = useLingui();
 
-  useEffect(() => {
-    (async () => {
-      const detectedLang = await detectLanguage(publication?.metadata?.content);
-      if (detectedLang != i18n.locale) {
-        setCanTranslate(true);
-      }
-    })();
-  }, [i18n.locale, publication?.metadata?.content]);
+  const publicationLanguage: string = getPrimaryLanguage(publication?.metadata?.locale);
+  const canTranslate = publicationLanguage != getPrimaryLanguage(i18n.locale);
 
   if (publication?.metadata?.encryptionParams) {
     return <DecryptedPublicationBody encryptedPublication={publication} />;
