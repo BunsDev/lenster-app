@@ -4284,6 +4284,7 @@ export type CommentFieldsFragment = {
     __typename?: 'MetadataOutput';
     name?: string | null;
     content?: any | null;
+    locale?: any | null;
     image?: any | null;
     attributes: Array<{
       __typename?: 'MetadataAttributeOutput';
@@ -4507,6 +4508,7 @@ export type CommentFieldsFragment = {
           __typename?: 'MetadataOutput';
           name?: string | null;
           content?: any | null;
+          locale?: any | null;
           image?: any | null;
           attributes: Array<{
             __typename?: 'MetadataAttributeOutput';
@@ -4742,6 +4744,7 @@ export type CommentFieldsFragment = {
                 __typename?: 'MetadataOutput';
                 name?: string | null;
                 content?: any | null;
+                locale?: any | null;
                 image?: any | null;
                 attributes: Array<{
                   __typename?: 'MetadataAttributeOutput';
@@ -5022,6 +5025,7 @@ export type CommentFieldsFragment = {
                       __typename?: 'MetadataOutput';
                       name?: string | null;
                       content?: any | null;
+                      locale?: any | null;
                       image?: any | null;
                       attributes: Array<{
                         __typename?: 'MetadataAttributeOutput';
@@ -5257,6 +5261,7 @@ export type CommentFieldsFragment = {
                 __typename?: 'MetadataOutput';
                 name?: string | null;
                 content?: any | null;
+                locale?: any | null;
                 image?: any | null;
                 attributes: Array<{
                   __typename?: 'MetadataAttributeOutput';
@@ -5486,6 +5491,7 @@ export type CommentFieldsFragment = {
           __typename?: 'MetadataOutput';
           name?: string | null;
           content?: any | null;
+          locale?: any | null;
           image?: any | null;
           attributes: Array<{
             __typename?: 'MetadataAttributeOutput';
@@ -5762,6 +5768,7 @@ export type CommentFieldsFragment = {
                 __typename?: 'MetadataOutput';
                 name?: string | null;
                 content?: any | null;
+                locale?: any | null;
                 image?: any | null;
                 attributes: Array<{
                   __typename?: 'MetadataAttributeOutput';
@@ -5994,6 +6001,7 @@ export type CommentFieldsFragment = {
           __typename?: 'MetadataOutput';
           name?: string | null;
           content?: any | null;
+          locale?: any | null;
           image?: any | null;
           attributes: Array<{
             __typename?: 'MetadataAttributeOutput';
@@ -6104,6 +6112,7 @@ export type MetadataFieldsFragment = {
   __typename?: 'MetadataOutput';
   name?: string | null;
   content?: any | null;
+  locale?: any | null;
   image?: any | null;
   attributes: Array<{
     __typename?: 'MetadataAttributeOutput';
@@ -6332,6 +6341,7 @@ export type MirrorFieldsFragment = {
     __typename?: 'MetadataOutput';
     name?: string | null;
     content?: any | null;
+    locale?: any | null;
     image?: any | null;
     attributes: Array<{
       __typename?: 'MetadataAttributeOutput';
@@ -6608,6 +6618,7 @@ export type MirrorFieldsFragment = {
           __typename?: 'MetadataOutput';
           name?: string | null;
           content?: any | null;
+          locale?: any | null;
           image?: any | null;
           attributes: Array<{
             __typename?: 'MetadataAttributeOutput';
@@ -6847,6 +6858,7 @@ export type PostFieldsFragment = {
     __typename?: 'MetadataOutput';
     name?: string | null;
     content?: any | null;
+    locale?: any | null;
     image?: any | null;
     attributes: Array<{
       __typename?: 'MetadataAttributeOutput';
@@ -8102,6 +8114,7 @@ export type CommentFeedQuery = {
             __typename?: 'MetadataOutput';
             name?: string | null;
             content?: any | null;
+            locale?: any | null;
             image?: any | null;
             attributes: Array<{
               __typename?: 'MetadataAttributeOutput';
@@ -8329,6 +8342,7 @@ export type CommentFeedQuery = {
                   __typename?: 'MetadataOutput';
                   name?: string | null;
                   content?: any | null;
+                  locale?: any | null;
                   image?: any | null;
                   attributes: Array<{
                     __typename?: 'MetadataAttributeOutput';
@@ -8572,6 +8586,7 @@ export type CommentFeedQuery = {
                         __typename?: 'MetadataOutput';
                         name?: string | null;
                         content?: any | null;
+                        locale?: any | null;
                         image?: any | null;
                         attributes: Array<{
                           __typename?: 'MetadataAttributeOutput';
@@ -8896,6 +8911,7 @@ export type CommentFeedQuery = {
                               __typename?: 'MetadataOutput';
                               name?: string | null;
                               content?: any | null;
+                              locale?: any | null;
                               image?: any | null;
                               attributes: Array<{
                                 __typename?: 'MetadataAttributeOutput';
@@ -9148,6 +9164,7 @@ export type CommentFeedQuery = {
                         __typename?: 'MetadataOutput';
                         name?: string | null;
                         content?: any | null;
+                        locale?: any | null;
                         image?: any | null;
                         attributes: Array<{
                           __typename?: 'MetadataAttributeOutput';
@@ -9384,6 +9401,7 @@ export type CommentFeedQuery = {
                   __typename?: 'MetadataOutput';
                   name?: string | null;
                   content?: any | null;
+                  locale?: any | null;
                   image?: any | null;
                   attributes: Array<{
                     __typename?: 'MetadataAttributeOutput';
@@ -9672,6 +9690,7 @@ export type CommentFeedQuery = {
                         __typename?: 'MetadataOutput';
                         name?: string | null;
                         content?: any | null;
+                        locale?: any | null;
                         image?: any | null;
                         attributes: Array<{
                           __typename?: 'MetadataAttributeOutput';
@@ -9911,6 +9930,7 @@ export type CommentFeedQuery = {
                   __typename?: 'MetadataOutput';
                   name?: string | null;
                   content?: any | null;
+                  locale?: any | null;
                   image?: any | null;
                   attributes: Array<{
                     __typename?: 'MetadataAttributeOutput';
@@ -10216,6 +10236,7 @@ export type ExploreFeedQuery = {
             __typename?: 'MetadataOutput';
             name?: string | null;
             content?: any | null;
+            locale?: any | null;
             image?: any | null;
             attributes: Array<{
               __typename?: 'MetadataAttributeOutput';
@@ -10443,6 +10464,7 @@ export type ExploreFeedQuery = {
                   __typename?: 'MetadataOutput';
                   name?: string | null;
                   content?: any | null;
+                  locale?: any | null;
                   image?: any | null;
                   attributes: Array<{
                     __typename?: 'MetadataAttributeOutput';
@@ -10686,6 +10708,7 @@ export type ExploreFeedQuery = {
                         __typename?: 'MetadataOutput';
                         name?: string | null;
                         content?: any | null;
+                        locale?: any | null;
                         image?: any | null;
                         attributes: Array<{
                           __typename?: 'MetadataAttributeOutput';
@@ -11010,6 +11033,7 @@ export type ExploreFeedQuery = {
                               __typename?: 'MetadataOutput';
                               name?: string | null;
                               content?: any | null;
+                              locale?: any | null;
                               image?: any | null;
                               attributes: Array<{
                                 __typename?: 'MetadataAttributeOutput';
@@ -11262,6 +11286,7 @@ export type ExploreFeedQuery = {
                         __typename?: 'MetadataOutput';
                         name?: string | null;
                         content?: any | null;
+                        locale?: any | null;
                         image?: any | null;
                         attributes: Array<{
                           __typename?: 'MetadataAttributeOutput';
@@ -11498,6 +11523,7 @@ export type ExploreFeedQuery = {
                   __typename?: 'MetadataOutput';
                   name?: string | null;
                   content?: any | null;
+                  locale?: any | null;
                   image?: any | null;
                   attributes: Array<{
                     __typename?: 'MetadataAttributeOutput';
@@ -11786,6 +11812,7 @@ export type ExploreFeedQuery = {
                         __typename?: 'MetadataOutput';
                         name?: string | null;
                         content?: any | null;
+                        locale?: any | null;
                         image?: any | null;
                         attributes: Array<{
                           __typename?: 'MetadataAttributeOutput';
@@ -12025,6 +12052,7 @@ export type ExploreFeedQuery = {
                   __typename?: 'MetadataOutput';
                   name?: string | null;
                   content?: any | null;
+                  locale?: any | null;
                   image?: any | null;
                   attributes: Array<{
                     __typename?: 'MetadataAttributeOutput';
@@ -12255,6 +12283,7 @@ export type ExploreFeedQuery = {
             __typename?: 'MetadataOutput';
             name?: string | null;
             content?: any | null;
+            locale?: any | null;
             image?: any | null;
             attributes: Array<{
               __typename?: 'MetadataAttributeOutput';
@@ -12535,6 +12564,7 @@ export type ExploreFeedQuery = {
                   __typename?: 'MetadataOutput';
                   name?: string | null;
                   content?: any | null;
+                  locale?: any | null;
                   image?: any | null;
                   attributes: Array<{
                     __typename?: 'MetadataAttributeOutput';
@@ -12767,6 +12797,7 @@ export type ExploreFeedQuery = {
             __typename?: 'MetadataOutput';
             name?: string | null;
             content?: any | null;
+            locale?: any | null;
             image?: any | null;
             attributes: Array<{
               __typename?: 'MetadataAttributeOutput';
@@ -13014,6 +13045,7 @@ export type FeedHighlightsQuery = {
             __typename?: 'MetadataOutput';
             name?: string | null;
             content?: any | null;
+            locale?: any | null;
             image?: any | null;
             attributes: Array<{
               __typename?: 'MetadataAttributeOutput';
@@ -13241,6 +13273,7 @@ export type FeedHighlightsQuery = {
                   __typename?: 'MetadataOutput';
                   name?: string | null;
                   content?: any | null;
+                  locale?: any | null;
                   image?: any | null;
                   attributes: Array<{
                     __typename?: 'MetadataAttributeOutput';
@@ -13484,6 +13517,7 @@ export type FeedHighlightsQuery = {
                         __typename?: 'MetadataOutput';
                         name?: string | null;
                         content?: any | null;
+                        locale?: any | null;
                         image?: any | null;
                         attributes: Array<{
                           __typename?: 'MetadataAttributeOutput';
@@ -13808,6 +13842,7 @@ export type FeedHighlightsQuery = {
                               __typename?: 'MetadataOutput';
                               name?: string | null;
                               content?: any | null;
+                              locale?: any | null;
                               image?: any | null;
                               attributes: Array<{
                                 __typename?: 'MetadataAttributeOutput';
@@ -14060,6 +14095,7 @@ export type FeedHighlightsQuery = {
                         __typename?: 'MetadataOutput';
                         name?: string | null;
                         content?: any | null;
+                        locale?: any | null;
                         image?: any | null;
                         attributes: Array<{
                           __typename?: 'MetadataAttributeOutput';
@@ -14296,6 +14332,7 @@ export type FeedHighlightsQuery = {
                   __typename?: 'MetadataOutput';
                   name?: string | null;
                   content?: any | null;
+                  locale?: any | null;
                   image?: any | null;
                   attributes: Array<{
                     __typename?: 'MetadataAttributeOutput';
@@ -14584,6 +14621,7 @@ export type FeedHighlightsQuery = {
                         __typename?: 'MetadataOutput';
                         name?: string | null;
                         content?: any | null;
+                        locale?: any | null;
                         image?: any | null;
                         attributes: Array<{
                           __typename?: 'MetadataAttributeOutput';
@@ -14823,6 +14861,7 @@ export type FeedHighlightsQuery = {
                   __typename?: 'MetadataOutput';
                   name?: string | null;
                   content?: any | null;
+                  locale?: any | null;
                   image?: any | null;
                   attributes: Array<{
                     __typename?: 'MetadataAttributeOutput';
@@ -15053,6 +15092,7 @@ export type FeedHighlightsQuery = {
             __typename?: 'MetadataOutput';
             name?: string | null;
             content?: any | null;
+            locale?: any | null;
             image?: any | null;
             attributes: Array<{
               __typename?: 'MetadataAttributeOutput';
@@ -15333,6 +15373,7 @@ export type FeedHighlightsQuery = {
                   __typename?: 'MetadataOutput';
                   name?: string | null;
                   content?: any | null;
+                  locale?: any | null;
                   image?: any | null;
                   attributes: Array<{
                     __typename?: 'MetadataAttributeOutput';
@@ -15565,6 +15606,7 @@ export type FeedHighlightsQuery = {
             __typename?: 'MetadataOutput';
             name?: string | null;
             content?: any | null;
+            locale?: any | null;
             image?: any | null;
             attributes: Array<{
               __typename?: 'MetadataAttributeOutput';
@@ -16724,6 +16766,7 @@ export type ProfileFeedQuery = {
             __typename?: 'MetadataOutput';
             name?: string | null;
             content?: any | null;
+            locale?: any | null;
             image?: any | null;
             attributes: Array<{
               __typename?: 'MetadataAttributeOutput';
@@ -16951,6 +16994,7 @@ export type ProfileFeedQuery = {
                   __typename?: 'MetadataOutput';
                   name?: string | null;
                   content?: any | null;
+                  locale?: any | null;
                   image?: any | null;
                   attributes: Array<{
                     __typename?: 'MetadataAttributeOutput';
@@ -17194,6 +17238,7 @@ export type ProfileFeedQuery = {
                         __typename?: 'MetadataOutput';
                         name?: string | null;
                         content?: any | null;
+                        locale?: any | null;
                         image?: any | null;
                         attributes: Array<{
                           __typename?: 'MetadataAttributeOutput';
@@ -17518,6 +17563,7 @@ export type ProfileFeedQuery = {
                               __typename?: 'MetadataOutput';
                               name?: string | null;
                               content?: any | null;
+                              locale?: any | null;
                               image?: any | null;
                               attributes: Array<{
                                 __typename?: 'MetadataAttributeOutput';
@@ -17770,6 +17816,7 @@ export type ProfileFeedQuery = {
                         __typename?: 'MetadataOutput';
                         name?: string | null;
                         content?: any | null;
+                        locale?: any | null;
                         image?: any | null;
                         attributes: Array<{
                           __typename?: 'MetadataAttributeOutput';
@@ -18006,6 +18053,7 @@ export type ProfileFeedQuery = {
                   __typename?: 'MetadataOutput';
                   name?: string | null;
                   content?: any | null;
+                  locale?: any | null;
                   image?: any | null;
                   attributes: Array<{
                     __typename?: 'MetadataAttributeOutput';
@@ -18294,6 +18342,7 @@ export type ProfileFeedQuery = {
                         __typename?: 'MetadataOutput';
                         name?: string | null;
                         content?: any | null;
+                        locale?: any | null;
                         image?: any | null;
                         attributes: Array<{
                           __typename?: 'MetadataAttributeOutput';
@@ -18533,6 +18582,7 @@ export type ProfileFeedQuery = {
                   __typename?: 'MetadataOutput';
                   name?: string | null;
                   content?: any | null;
+                  locale?: any | null;
                   image?: any | null;
                   attributes: Array<{
                     __typename?: 'MetadataAttributeOutput';
@@ -18763,6 +18813,7 @@ export type ProfileFeedQuery = {
             __typename?: 'MetadataOutput';
             name?: string | null;
             content?: any | null;
+            locale?: any | null;
             image?: any | null;
             attributes: Array<{
               __typename?: 'MetadataAttributeOutput';
@@ -19043,6 +19094,7 @@ export type ProfileFeedQuery = {
                   __typename?: 'MetadataOutput';
                   name?: string | null;
                   content?: any | null;
+                  locale?: any | null;
                   image?: any | null;
                   attributes: Array<{
                     __typename?: 'MetadataAttributeOutput';
@@ -19275,6 +19327,7 @@ export type ProfileFeedQuery = {
             __typename?: 'MetadataOutput';
             name?: string | null;
             content?: any | null;
+            locale?: any | null;
             image?: any | null;
             attributes: Array<{
               __typename?: 'MetadataAttributeOutput';
@@ -19592,6 +19645,7 @@ export type PublicationQuery = {
           __typename?: 'MetadataOutput';
           name?: string | null;
           content?: any | null;
+          locale?: any | null;
           image?: any | null;
           attributes: Array<{
             __typename?: 'MetadataAttributeOutput';
@@ -19815,6 +19869,7 @@ export type PublicationQuery = {
                 __typename?: 'MetadataOutput';
                 name?: string | null;
                 content?: any | null;
+                locale?: any | null;
                 image?: any | null;
                 attributes: Array<{
                   __typename?: 'MetadataAttributeOutput';
@@ -20054,6 +20109,7 @@ export type PublicationQuery = {
                       __typename?: 'MetadataOutput';
                       name?: string | null;
                       content?: any | null;
+                      locale?: any | null;
                       image?: any | null;
                       attributes: Array<{
                         __typename?: 'MetadataAttributeOutput';
@@ -20378,6 +20434,7 @@ export type PublicationQuery = {
                             __typename?: 'MetadataOutput';
                             name?: string | null;
                             content?: any | null;
+                            locale?: any | null;
                             image?: any | null;
                             attributes: Array<{
                               __typename?: 'MetadataAttributeOutput';
@@ -20623,6 +20680,7 @@ export type PublicationQuery = {
                       __typename?: 'MetadataOutput';
                       name?: string | null;
                       content?: any | null;
+                      locale?: any | null;
                       image?: any | null;
                       attributes: Array<{
                         __typename?: 'MetadataAttributeOutput';
@@ -20855,6 +20913,7 @@ export type PublicationQuery = {
                 __typename?: 'MetadataOutput';
                 name?: string | null;
                 content?: any | null;
+                locale?: any | null;
                 image?: any | null;
                 attributes: Array<{
                   __typename?: 'MetadataAttributeOutput';
@@ -21135,6 +21194,7 @@ export type PublicationQuery = {
                       __typename?: 'MetadataOutput';
                       name?: string | null;
                       content?: any | null;
+                      locale?: any | null;
                       image?: any | null;
                       attributes: Array<{
                         __typename?: 'MetadataAttributeOutput';
@@ -21370,6 +21430,7 @@ export type PublicationQuery = {
                 __typename?: 'MetadataOutput';
                 name?: string | null;
                 content?: any | null;
+                locale?: any | null;
                 image?: any | null;
                 attributes: Array<{
                   __typename?: 'MetadataAttributeOutput';
@@ -21606,6 +21667,7 @@ export type PublicationQuery = {
           __typename?: 'MetadataOutput';
           name?: string | null;
           content?: any | null;
+          locale?: any | null;
           image?: any | null;
           attributes: Array<{
             __typename?: 'MetadataAttributeOutput';
@@ -21882,6 +21944,7 @@ export type PublicationQuery = {
                 __typename?: 'MetadataOutput';
                 name?: string | null;
                 content?: any | null;
+                locale?: any | null;
                 image?: any | null;
                 attributes: Array<{
                   __typename?: 'MetadataAttributeOutput';
@@ -22120,6 +22183,7 @@ export type PublicationQuery = {
           __typename?: 'MetadataOutput';
           name?: string | null;
           content?: any | null;
+          locale?: any | null;
           image?: any | null;
           attributes: Array<{
             __typename?: 'MetadataAttributeOutput';
@@ -22475,6 +22539,7 @@ export type SearchPublicationsQuery = {
                 __typename?: 'MetadataOutput';
                 name?: string | null;
                 content?: any | null;
+                locale?: any | null;
                 image?: any | null;
                 attributes: Array<{
                   __typename?: 'MetadataAttributeOutput';
@@ -22702,6 +22767,7 @@ export type SearchPublicationsQuery = {
                       __typename?: 'MetadataOutput';
                       name?: string | null;
                       content?: any | null;
+                      locale?: any | null;
                       image?: any | null;
                       attributes: Array<{
                         __typename?: 'MetadataAttributeOutput';
@@ -22977,6 +23043,7 @@ export type SearchPublicationsQuery = {
                             __typename?: 'MetadataOutput';
                             name?: string | null;
                             content?: any | null;
+                            locale?: any | null;
                             image?: any | null;
                             attributes: Array<{
                               __typename?: 'MetadataAttributeOutput';
@@ -23313,6 +23380,7 @@ export type SearchPublicationsQuery = {
                                   __typename?: 'MetadataOutput';
                                   name?: string | null;
                                   content?: any | null;
+                                  locale?: any | null;
                                   image?: any | null;
                                   attributes: Array<{
                                     __typename?: 'MetadataAttributeOutput';
@@ -23600,6 +23668,7 @@ export type SearchPublicationsQuery = {
                             __typename?: 'MetadataOutput';
                             name?: string | null;
                             content?: any | null;
+                            locale?: any | null;
                             image?: any | null;
                             attributes: Array<{
                               __typename?: 'MetadataAttributeOutput';
@@ -23842,6 +23911,7 @@ export type SearchPublicationsQuery = {
                       __typename?: 'MetadataOutput';
                       name?: string | null;
                       content?: any | null;
+                      locale?: any | null;
                       image?: any | null;
                       attributes: Array<{
                         __typename?: 'MetadataAttributeOutput';
@@ -24166,6 +24236,7 @@ export type SearchPublicationsQuery = {
                             __typename?: 'MetadataOutput';
                             name?: string | null;
                             content?: any | null;
+                            locale?: any | null;
                             image?: any | null;
                             attributes: Array<{
                               __typename?: 'MetadataAttributeOutput';
@@ -24411,6 +24482,7 @@ export type SearchPublicationsQuery = {
                       __typename?: 'MetadataOutput';
                       name?: string | null;
                       content?: any | null;
+                      locale?: any | null;
                       image?: any | null;
                       attributes: Array<{
                         __typename?: 'MetadataAttributeOutput';
@@ -24647,6 +24719,7 @@ export type SearchPublicationsQuery = {
                 __typename?: 'MetadataOutput';
                 name?: string | null;
                 content?: any | null;
+                locale?: any | null;
                 image?: any | null;
                 attributes: Array<{
                   __typename?: 'MetadataAttributeOutput';
@@ -25105,6 +25178,7 @@ export type TimelineQuery = {
               __typename?: 'MetadataOutput';
               name?: string | null;
               content?: any | null;
+              locale?: any | null;
               image?: any | null;
               attributes: Array<{
                 __typename?: 'MetadataAttributeOutput';
@@ -25332,6 +25406,7 @@ export type TimelineQuery = {
                     __typename?: 'MetadataOutput';
                     name?: string | null;
                     content?: any | null;
+                    locale?: any | null;
                     image?: any | null;
                     attributes: Array<{
                       __typename?: 'MetadataAttributeOutput';
@@ -25600,6 +25675,7 @@ export type TimelineQuery = {
                           __typename?: 'MetadataOutput';
                           name?: string | null;
                           content?: any | null;
+                          locale?: any | null;
                           image?: any | null;
                           attributes: Array<{
                             __typename?: 'MetadataAttributeOutput';
@@ -25930,6 +26006,7 @@ export type TimelineQuery = {
                                 __typename?: 'MetadataOutput';
                                 name?: string | null;
                                 content?: any | null;
+                                locale?: any | null;
                                 image?: any | null;
                                 attributes: Array<{
                                   __typename?: 'MetadataAttributeOutput';
@@ -26207,6 +26284,7 @@ export type TimelineQuery = {
                           __typename?: 'MetadataOutput';
                           name?: string | null;
                           content?: any | null;
+                          locale?: any | null;
                           image?: any | null;
                           attributes: Array<{
                             __typename?: 'MetadataAttributeOutput';
@@ -26449,6 +26527,7 @@ export type TimelineQuery = {
                     __typename?: 'MetadataOutput';
                     name?: string | null;
                     content?: any | null;
+                    locale?: any | null;
                     image?: any | null;
                     attributes: Array<{
                       __typename?: 'MetadataAttributeOutput';
@@ -26762,6 +26841,7 @@ export type TimelineQuery = {
                           __typename?: 'MetadataOutput';
                           name?: string | null;
                           content?: any | null;
+                          locale?: any | null;
                           image?: any | null;
                           attributes: Array<{
                             __typename?: 'MetadataAttributeOutput';
@@ -27007,6 +27087,7 @@ export type TimelineQuery = {
                     __typename?: 'MetadataOutput';
                     name?: string | null;
                     content?: any | null;
+                    locale?: any | null;
                     image?: any | null;
                     attributes: Array<{
                       __typename?: 'MetadataAttributeOutput';
@@ -27240,6 +27321,7 @@ export type TimelineQuery = {
               __typename?: 'MetadataOutput';
               name?: string | null;
               content?: any | null;
+              locale?: any | null;
               image?: any | null;
               attributes: Array<{
                 __typename?: 'MetadataAttributeOutput';
@@ -27573,6 +27655,7 @@ export type TimelineQuery = {
           __typename?: 'MetadataOutput';
           name?: string | null;
           content?: any | null;
+          locale?: any | null;
           image?: any | null;
           attributes: Array<{
             __typename?: 'MetadataAttributeOutput';
@@ -27796,6 +27879,7 @@ export type TimelineQuery = {
                 __typename?: 'MetadataOutput';
                 name?: string | null;
                 content?: any | null;
+                locale?: any | null;
                 image?: any | null;
                 attributes: Array<{
                   __typename?: 'MetadataAttributeOutput';
@@ -28035,6 +28119,7 @@ export type TimelineQuery = {
                       __typename?: 'MetadataOutput';
                       name?: string | null;
                       content?: any | null;
+                      locale?: any | null;
                       image?: any | null;
                       attributes: Array<{
                         __typename?: 'MetadataAttributeOutput';
@@ -28359,6 +28444,7 @@ export type TimelineQuery = {
                             __typename?: 'MetadataOutput';
                             name?: string | null;
                             content?: any | null;
+                            locale?: any | null;
                             image?: any | null;
                             attributes: Array<{
                               __typename?: 'MetadataAttributeOutput';
@@ -28604,6 +28690,7 @@ export type TimelineQuery = {
                       __typename?: 'MetadataOutput';
                       name?: string | null;
                       content?: any | null;
+                      locale?: any | null;
                       image?: any | null;
                       attributes: Array<{
                         __typename?: 'MetadataAttributeOutput';
@@ -28836,6 +28923,7 @@ export type TimelineQuery = {
                 __typename?: 'MetadataOutput';
                 name?: string | null;
                 content?: any | null;
+                locale?: any | null;
                 image?: any | null;
                 attributes: Array<{
                   __typename?: 'MetadataAttributeOutput';
@@ -29116,6 +29204,7 @@ export type TimelineQuery = {
                       __typename?: 'MetadataOutput';
                       name?: string | null;
                       content?: any | null;
+                      locale?: any | null;
                       image?: any | null;
                       attributes: Array<{
                         __typename?: 'MetadataAttributeOutput';
@@ -29351,6 +29440,7 @@ export type TimelineQuery = {
                 __typename?: 'MetadataOutput';
                 name?: string | null;
                 content?: any | null;
+                locale?: any | null;
                 image?: any | null;
                 attributes: Array<{
                   __typename?: 'MetadataAttributeOutput';
@@ -29708,6 +29798,7 @@ export const MetadataFieldsFragmentDoc = gql`
   fragment MetadataFields on MetadataOutput {
     name
     content
+    locale
     image
     attributes {
       traitType

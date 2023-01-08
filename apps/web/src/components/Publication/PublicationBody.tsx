@@ -50,7 +50,7 @@ const PublicationBody: FC<Props> = ({ publication }) => {
       toast.error('Translation failed');
     }
   };
-
+  //console.log('PublicationBody publication', publication);
   return (
     <div className="break-words">
       <Markup className={clsx({ 'line-clamp-5': showMore }, 'markup linkify text-md break-words')}>
@@ -64,6 +64,7 @@ const PublicationBody: FC<Props> = ({ publication }) => {
           </Link>
         </div>
       )}
+      <div>Locale: {publication?.metadata?.locale}</div>
       {!translatedText ? (
         canTranslate && (
           <div className="mt-4 text-sm lt-text-gray-500 font-bold flex items-center space-x-1">

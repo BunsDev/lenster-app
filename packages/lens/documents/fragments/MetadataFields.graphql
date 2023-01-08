@@ -1,6 +1,7 @@
 fragment MetadataFields on MetadataOutput {
   name
   content
+  locale
   image
   attributes {
     traitType

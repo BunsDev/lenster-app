@@ -19,10 +19,10 @@ import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext
 import getSignature from '@lib/getSignature';
 import getTags from '@lib/getTags';
 import getTextNftUrl from '@lib/getTextNftUrl';
-import getUserLocale from '@lib/getUserLocale';
 import { Mixpanel } from '@lib/mixpanel';
 import onError from '@lib/onError';
 import splitSignature from '@lib/splitSignature';
+import { detectLanguage } from '@lib/translateText';
 import uploadToArweave from '@lib/uploadToArweave';
 import { t } from '@lingui/macro';
 import { LensHubProxy } from 'abis';
@@ -448,6 +448,9 @@ const NewPublication: FC<Props> = ({ publication }) => {
         item: attachment.item!
       }));
 
+      const detectedLanguage = await detectLanguage(publicationContent);
+      console.log('NewPublication createPublication detectedLanguage', detectedLanguage);
+
       const metadata: PublicationMetadataV2Input = {
         version: '2.0.0',
         metadata_id: uuid(),
@@ -469,7 +472,7 @@ const NewPublication: FC<Props> = ({ publication }) => {
         contentWarning: null,
         attributes,
         media: attachmentsInput,
-        locale: getUserLocale(),
+        locale: detectedLanguage,
         appId: APP_NAME
       };
 
