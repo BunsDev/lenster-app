@@ -15,6 +15,7 @@ import { useRouter } from 'next/router';
 import type { FC } from 'react';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
+const removeMarkdown = require('remove-markdown');
 
 import DecryptedPublicationBody from './DecryptedPublicationBody';
 
@@ -38,7 +39,8 @@ const PublicationBody: FC<Props> = ({ publication }) => {
 
   const translateContent = async (sourceText: string) => {
     try {
-      const translationResult = await translateText(sourceText, i18n.locale);
+      const plainText = removeMarkdown(sourceText);
+      const translationResult = await translateText(plainText, i18n.locale);
       setTranslatedText(translationResult);
     } catch (error) {
       console.error(error);
