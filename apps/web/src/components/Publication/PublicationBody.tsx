@@ -30,6 +30,7 @@ const PublicationBody: FC<Props> = ({ publication }) => {
 
   const publicationLanguage: string = getPrimaryLanguage(publication?.metadata?.locale);
   const canTranslate = publicationLanguage != getPrimaryLanguage(i18n.locale);
+  const debug = false;
 
   if (publication?.metadata?.encryptionParams) {
     return <DecryptedPublicationBody encryptedPublication={publication} />;
@@ -58,7 +59,7 @@ const PublicationBody: FC<Props> = ({ publication }) => {
           </Link>
         </div>
       )}
-      <div>Locale: {publication?.metadata?.locale}</div>
+      {debug && <div>Locale: {publication?.metadata?.locale}</div>}
       {!translatedText ? (
         canTranslate && (
           <div className="mt-4 text-sm lt-text-gray-500 font-bold flex items-center space-x-1">
@@ -75,17 +76,21 @@ const PublicationBody: FC<Props> = ({ publication }) => {
         )
       ) : (
         <div>
-          <div>Translated from: {translatedText.detectedSourceLanguage}</div>
-          <div>{translatedText.translatedText}</div>
-          <button
-            type="button"
-            onClick={(event) => {
-              setTranslatedText(null);
-              event.stopPropagation();
-            }}
-          >
-            Hide
-          </button>
+          <div className="font-bold">Translated from: {translatedText.detectedSourceLanguage}</div>
+          <div className="py-1.5 pl-2 text-gray-700 border-l-4 dark:text-gray-400 dark:border-gray-700">
+            {translatedText.translatedText}
+          </div>
+          {debug && (
+            <button
+              type="button"
+              onClick={(event) => {
+                setTranslatedText(null);
+                event.stopPropagation();
+              }}
+            >
+              Hide
+            </button>
+          )}
         </div>
       )}
 
