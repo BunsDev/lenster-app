@@ -64,7 +64,7 @@ const PublicationBody: FC<Props> = ({ publication }) => {
       {debug && <div>Locale: {publication?.metadata?.locale}</div>}
       {!translatedText ? (
         canTranslate && (
-          <div className="mt-4 text-sm lt-text-gray-500 font-bold flex items-center space-x-1">
+          <div className="lt-text-gray-500 mt-4 flex items-center space-x-1 text-sm font-bold">
             <button
               type="button"
               onClick={(event) => {
@@ -79,7 +79,7 @@ const PublicationBody: FC<Props> = ({ publication }) => {
       ) : (
         <div>
           <div className="font-bold">Translated from: {translatedText.detectedSourceLanguage}</div>
-          <div className="py-1.5 pl-2 text-gray-700 border-l-4 dark:text-gray-400 dark:border-gray-700">
+          <div className="border-l-4 py-1.5 pl-2 text-gray-700 dark:border-gray-700 dark:text-gray-400">
             {translatedText.translatedText}
           </div>
           {debug && (
